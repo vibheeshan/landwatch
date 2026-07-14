@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LandWatch 🔍</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="glass">
+    <div class="container flex">
+      <div class="logo"><i class="fa fa-gavel"></i> LandWatch 🔍</div>
+      <nav>
+        <a href="index.html">Search</a>
+        <a href="alerts.html">My Alerts</a>
+        <a href="admin-login.html">Admin Login</a>
+        <select id="lang-switch">
+          <option>EN</option><option>TA</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="min-height:100vh; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg,#3730a3,#7c3aed);">
+    <div class="container center">
+      <h1>Check Land Litigation Status</h1>
+      <p>Enter village name and survey number to instantly check any pending court cases</p>
+      <div class="card" style="max-width:600px; margin:1rem auto;">
+        <form id="search-form">
+          <div class="form-group">
+            <label>Village Name</label>
+            <input type="text" id="village-input" placeholder="Start typing...">
+          </div>
+          <div class="form-group">
+            <label>Survey Number</label>
+            <input type="text" id="survey-input">
+          </div>
+          <div class="form-group">
+            <label>Dispute Type</label>
+            <select id="dispute-filter">
+              <option>All Types</option>
+              <option>Ownership</option>
+              <option>Boundary</option>
+              <option>Inheritance</option>
+              <option>Civil</option>
+              <option>Government</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Search</button>
+        </form>
+        <div class="tips">Try: Krishnagiri, 123/2A</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/utils.js"></script>
+</body>
+</html>
