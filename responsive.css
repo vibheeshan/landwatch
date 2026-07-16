@@ -1,0 +1,5 @@
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .container { padding: 0.5rem; }
+  .btn { width: 100%; }
+}
